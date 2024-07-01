@@ -1,0 +1,30 @@
+{% extends 'viajes/index.html' %}
+{% load static %}
+
+{% block titulo %}
+
+<div class="col-lg-8 align-self-end">
+    <h1 class="text-white font-weight-bold">Acerca de Mí</h1>
+    <hr class="divider" />
+</div>
+<div class="col-lg-8 align-self-baseline"></div>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<div class="row">
+    <div class="col-lg-4">
+        <img src="{% static 'assets/perfil.webp' %}" class="img-fluid rounded-circle" alt="Mi Foto">
+    </div>
+    <div class="col-lg-8">
+        <h2>Esta página habla sobre mí...</h2>
+        <br>
+        <h3>Mi nombre es Brian, soy el creador de esta página y mi Proyecto está orientado a facilitar Viajes y Turismo.</h3>
+        <h3>Con este proyecto intento simplificar la organización de Viajes a diferentes destinos.</h3>
+        <h4>Mis hobbies son jugar al ajedrez, tocar la guitarra, leer y cocinar.</h4>
+    </div>
+</div>
+
+{% endblock contenido %}

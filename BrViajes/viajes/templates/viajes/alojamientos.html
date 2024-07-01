@@ -1,0 +1,36 @@
+{% extends 'viajes/index.html' %}
+
+
+{% block titulo %}
+
+<div class="col-lg-8 align-self-end">
+    <h1 class="text-white font-weight-bold">Alojamientos</h1>
+    <hr class="divider" />
+</div>
+<div class="col-lg-8 align-self-baseline"></div>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead> 
+        <tr>
+            <th>ID</th>
+            <th>Nombre/ Ubicacion del Alojamiento</th>
+            <th>Categoria en Estrellas</th>
+        </tr>
+    </thead>
+    <tbody>        
+        {% for a in alojamientos %}
+            <tr>
+                <td>{{ a.id }}</td>
+                <td>{{ a.hotel }}</td>
+                <td>{{ a.categoriaEstrellas }}</td>
+            </tr>            
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}

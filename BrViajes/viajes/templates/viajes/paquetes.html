@@ -1,0 +1,38 @@
+{% extends 'viajes/index.html' %}
+
+
+{% block titulo %}
+
+<div class="col-lg-8 align-self-end">
+    <h1 class="text-white font-weight-bold">Paquetes</h1>
+    <hr class="divider" />
+</div>   
+<div class="col-lg-8 align-self-baseline"></div> 
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead> 
+        <tr>
+            <th>ID</th>
+            <th>Nombre/ Ubicacion del Alojamiento</th>
+            <th>Nombre de la Aerolínea</th>
+            <th>Estadía en noches</th>
+        </tr>
+    </thead>
+    <tbody>        
+        {% for p in paquetes %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.hotel }}</td>
+                <td>{{ p.nombreAerolinea }}</td>
+                <td>{{ p.estadiaNoches }}</td>
+            </tr>            
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
